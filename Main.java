@@ -20,25 +20,44 @@ public class Main
 
     //problem 2
     
-    System.out.println("enter numbers to find max. enter -1 to stop");
+    
+    int num;
+    System.out.println("How many numbers do you want to input?");
+    num = scan.nextInt();
+    
 
-    int currentNum = 0;
-    int max = 0;
-  
-    while (N != -1)
+    int counter = 0;
+    int userInput;
+    int max = Integer.MIN_VALUE;
+
+    while(counter < num)
     {
-      currentNum = scan.nextInt();
-        if (currentNum > max)
-        {
-          max = currentNum;
-
-        }
-        System.out.println("The max is: " + max);
+      userInput = scan.nextInt();
+      
+      if (userInput > max)
+      {
+        max = userInput;
+      }
+      counter++;
     }
 
+    System.out.println("The max is " + max);
 
+    //Problem 3
 
+    String word = "calculator";
+    int index = 0;
+    int counter1 = 0;
+  
+    while (counter1 < word.length())
+    {
+      String currentLetter = word.substring(index, index + 2); // gets 2 letter at a time
+      counter1++;
+      index = index + 2;
+
+    }
     
+    System.out.println(currentLetter);
     
    scan.close();
   }
